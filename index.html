@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Links</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Roboto', sans-serif;
+        }
+        h1{
+            font-family: 'Bebas Neue';
+        }
+        section{
+            border: solid 1px rgb(117, 117, 117);
+            border-radius: 15px;
+            margin: 10%;
+            padding: 15px;
+
+        }
+        #img_perfil{
+            width: 150px;
+        }
+        .ico_social{
+            width: 30px;
+            margin: 10px;
+        }
+        div{
+            text-align: center;
+        }
+        button{
+            margin: 5px;
+            width: 150px;
+            padding: 10px;
+            color: white;
+            background-color: #0F172A;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: #6528F7;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <img id="img_perfil" src="./img/perfil.png">
+            <h1>Marcelo <b>Nascimento</b></h1>
+            <p>Desenvolvedor, Concurseiro, Tecnologo em Analise e Desenvolvimento de Sistemas. Conheça meu trabalho<span>&#128071;</span></p>
+        </div>
+        <div>
+            <a href="https://github.com/marcelonascimento22"  target="_blank">
+                <button>Meus Projetos</button></br>
+            </a>
+            <button>Meu Canal</button></br>
+            <a href="https://marcelonascimento.ct.ws/" target="_blank">
+                <button>Portfólio</button></br>
+            </a>
+            <a href="https://marcelonascimento.ct.ws/index.php/contato/" target="_blank">
+                <button>Contato</button></br>
+            </a>
+        </div>
+        <div>
+            <a href="https://www.linkedin.com/in/marcelo12nascimento/" target="_blank">
+                <img class="ico_social" id="in_social" onmousemove="troca_img('in')" onmouseout="voltar_img('in')" src="./img/in.png">
+            </a>
+            <a href="https://www.instagram.com/_.marcelonascimento/" target="_blank"></a>
+                <img class="ico_social" id="insta_social" onmousemove="troca_img('insta')" onmouseout="voltar_img('insta')" src="./img/insta.png">
+            </a>
+        </div>
+    </section>
+    <script>
+        function troca_img(nome){
+            const imagem = document.getElementById(nome+"_social")
+            imagem.src = "./img/"+nome+"_black.png"
+        }
+
+        function voltar_img(nome){
+            const imagem = document.getElementById(nome+"_social")
+            imagem.src = "./img/"+nome+".png"
+        }
+    </script>
+</html>
